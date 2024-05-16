@@ -25,7 +25,7 @@ export function Navbar({ className }: { className?: string }) {
     <div
       className={cn(
         "transition-all duration-200 ease-in-out fixed top-3 w-full z-50 ",
-        hasScrolled ? "md:px-96 py-2" : "md:px-64"
+        hasScrolled ? "md:px-96 px-12" : "px-8 md:px-64"
       )}
     >
       <Menu setActive={setActive}>
@@ -144,7 +144,7 @@ const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-3xl outline-double outline-4 outline-indigo-200 backdrop-filter bg-indigo-300 bg-opacity-20 backdrop-blur-lg shadow-input flex justify-center items-center px-8 py-4" // Adjusted class name for centering
+      className="relative rounded-2xl drop-shadow outline-double outline-4 outline-indigo-700 backdrop-filter bg-slate-800 bg-opacity-10 backdrop-blur-lg shadow-input flex justify-center items-center px-8 py-2"
     >
       <div className="flex-none font-bold tracking-widest">Novel Nudge</div>
       <div className="flex-grow flex justify-center space-x-4">{children}</div>
